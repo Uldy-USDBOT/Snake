@@ -153,14 +153,19 @@
   }
 
   ::selection{background:var(--venom); color:var(--scale-dark);}
+
+  input:focus, textarea:focus, select:focus{
+    outline:none;
+    border-color:var(--venom) !important;
+    box-shadow:0 0 0 3px rgba(139,201,63,0.15);
+  }
+  select option{
+    background:var(--scale-dark);
+    color:var(--stone);
+  }
 </style>
 </head>
 <body>
-
-<!-- ============ Floating WhatsApp ============ -->
-<a href="https://wa.me/218917021437" target="_blank" class="wa-float">
-  <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.4L3 21l3.72-1.28a8.9 8.9 0 0 0 5.33 1.72h.01a8.94 8.94 0 0 0 8.93-8.93 8.9 8.9 0 0 0-3.39-6.19ZM12.06 19.9a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.79.96.94-2.72-.18-.28a7.45 7.45 0 1 1 6.07 3.24Zm4.08-5.58c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-1.3-.65-2.15-1.16-3.01-2.63-.23-.39.23-.36.66-1.2.07-.15.04-.28-.03-.4-.07-.11-.6-1.45-.82-1.98-.22-.53-.44-.46-.6-.46-.15-.01-.33-.01-.5-.01-.17 0-.44.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.77 2.72 4.35 3.71 2.14.81 2.57.65 3.03.6.46-.04 1.48-.6 1.68-1.19.2-.58.2-1.08.14-1.19-.06-.1-.22-.16-.44-.27Z"/></svg>
-</a>
 
 <!-- ============ Header ============ -->
 <header class="relative z-10 max-w-6xl mx-auto px-6 py-8 flex items-center justify-between">
@@ -171,9 +176,9 @@
     <a href="#gallery" class="hover:text-[var(--venom)] transition">المعرض</a>
     <a href="#why" class="hover:text-[var(--venom)] transition">لماذا</a>
     <a href="#details" class="hover:text-[var(--venom)] transition">التفاصيل</a>
+    <a href="#contact" class="hover:text-[var(--venom)] transition">تواصل</a>
   </nav>
-  <a href="https://wa.me/218917021437" target="_blank" class="btn-venom flex items-center gap-2 px-5 py-2.5 rounded-full text-sm">
-    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.4L3 21l3.72-1.28a8.9 8.9 0 0 0 5.33 1.72h.01a8.94 8.94 0 0 0 8.93-8.93 8.9 8.9 0 0 0-3.39-6.19ZM12.06 19.9a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.79.96.94-2.72-.18-.28a7.45 7.45 0 1 1 6.07 3.24Zm4.08-5.58c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-1.3-.65-2.15-1.16-3.01-2.63-.23-.39.23-.36.66-1.2.07-.15.04-.28-.03-.4-.07-.11-.6-1.45-.82-1.98-.22-.53-.44-.46-.6-.46-.15-.01-.33-.01-.5-.01-.17 0-.44.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.77 2.72 4.35 3.71 2.14.81 2.57.65 3.03.6.46-.04 1.48-.6 1.68-1.19.2-.58.2-1.08.14-1.19-.06-.1-.22-.16-.44-.27Z"/></svg>
+  <a href="#contact" class="btn-venom flex items-center gap-2 px-5 py-2.5 rounded-full text-sm">
     تواصل الآن
   </a>
 </header>
@@ -193,9 +198,8 @@
         مثالي لمنصات الأمن السيبراني، الألعاب، أو أي علامة تجارية جريئة.
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="https://wa.me/218917021437" target="_blank" class="btn-venom flex items-center gap-2 px-7 py-3.5 rounded-full text-sm">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.4L3 21l3.72-1.28a8.9 8.9 0 0 0 5.33 1.72h.01a8.94 8.94 0 0 0 8.93-8.93 8.9 8.9 0 0 0-3.39-6.19ZM12.06 19.9a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.79.96.94-2.72-.18-.28a7.45 7.45 0 1 1 6.07 3.24Zm4.08-5.58c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-1.3-.65-2.15-1.16-3.01-2.63-.23-.39.23-.36.66-1.2.07-.15.04-.28-.03-.4-.07-.11-.6-1.45-.82-1.98-.22-.53-.44-.46-.6-.46-.15-.01-.33-.01-.5-.01-.17 0-.44.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.77 2.72 4.35 3.71 2.14.81 2.57.65 3.03.6.46-.04 1.48-.6 1.68-1.19.2-.58.2-1.08.14-1.19-.06-.1-.22-.16-.44-.27Z"/></svg>
-          تواصل عبر واتساب
+        <a href="#contact" class="btn-venom flex items-center gap-2 px-7 py-3.5 rounded-full text-sm">
+          راسلنا الآن
         </a>
         <a href="#gallery" class="flex items-center gap-2 border-2 rounded-full px-7 py-3.5 text-sm font-bold hover:bg-white/5 transition" style="border-color:rgba(139,201,63,0.4)">
           استعرض المعرض
@@ -247,7 +251,7 @@
       <div class="img-overlay"><span class="text-xs font-bold text-white/90">القوة الهادئة</span></div>
     </div>
     <div class="snake-img-card rise d2">
-      <img src="snake.jpg" alt="Snake 2">
+      <img src="https://images.unsplash.com/photo-1531967360896-83bad4de9a2c?w=400&h=300&fit=crop" alt="Snake 2">
       <div class="img-overlay"><span class="text-xs font-bold text-white/90">دقة الحركة</span></div>
     </div>
     <div class="snake-img-card rise d3">
@@ -255,11 +259,11 @@
       <div class="img-overlay"><span class="text-xs font-bold text-white/90">تنوّع الألوان</span></div>
     </div>
     <div class="snake-img-card rise d4">
-      <img src="snake4.jpg" alt="Snake 4">
+      <img src="https://images.unsplash.com/photo-1531386450101-3f42a0cee63c?w=400&h=300&fit=crop" alt="Snake 4">
       <div class="img-overlay"><span class="text-xs font-bold text-white/90">رشاقة الشكل</span></div>
     </div>
     <div class="snake-img-card rise d5">
-      <img src="snake5.jpg" alt="Snake 5">
+      <img src="https://images.unsplash.com/photo-1585688049873-a9c8ce18e5c9?w=400&h=300&fit=crop" alt="Snake 5">
       <div class="img-overlay"><span class="text-xs font-bold text-white/90">حذر وترقّب</span></div>
     </div>
     <div class="snake-img-card rise d6">
@@ -295,7 +299,7 @@
       <div class="flex items-start gap-4">
         <div class="font-display text-3xl venom-text">03</div>
         <div>
-          <h3 class="font-bold text-lg text-white mb-2">اسم حيوان نادر جدا</h3>
+          <h3 class="font-bold text-lg text-white mb-2">اسم حيوان نادر</h3>
           <p class="text-sm text-stone/70 leading-relaxed">أسماء الحيوانات القصيرة أصبحت نادرة جدًا في سوق النطاقات، مما يرفع قيمتها.</p>
         </div>
       </div>
@@ -325,7 +329,7 @@
       </div>
       <div class="flex justify-between border-b pb-4" style="border-color:rgba(139,201,63,0.15)">
         <span class="text-sm text-stone/60 font-bold">طريقة التواصل</span>
-        <span class="font-bold text-sm text-white">واتساب مباشر</span>
+        <span class="font-bold text-sm text-white">نموذج تواصل مباشر</span>
       </div>
       <div class="flex justify-between">
         <span class="text-sm text-stone/60 font-bold">الحالة</span>
@@ -344,8 +348,8 @@
   <div class="grid md:grid-cols-3 gap-6">
     <div class="scale-card p-8 rise d1">
       <div class="font-display text-4xl venom-text mb-4">01</div>
-      <h4 class="font-bold text-white mb-2">راسلنا عبر واتساب</h4>
-      <p class="text-sm text-stone/70">اضغط على زر واتساب وابدأ محادثة مباشرة مع المالك.</p>
+      <h4 class="font-bold text-white mb-2">أرسل استفسارك</h4>
+      <p class="text-sm text-stone/70">عبّئ نموذج التواصل أدناه، وستصل رسالتك مباشرة للمالك.</p>
     </div>
     <div class="scale-card p-8 rise d2">
       <div class="font-display text-4xl venom-text mb-4">02</div>
@@ -360,17 +364,44 @@
   </div>
 </section>
 
-<!-- ============ Contact CTA ============ -->
-<section class="relative z-10 max-w-4xl mx-auto px-6 py-16 text-center">
-  <div class="scale-card p-12 md:p-16 rise">
+<!-- ============ Contact Form ============ -->
+<section id="contact" class="relative z-10 max-w-3xl mx-auto px-6 py-16">
+  <div class="mb-10 rise text-center">
     <div class="slither-line mx-auto mb-6"></div>
     <h2 class="font-display text-3xl md:text-4xl text-white mb-4">مستعد لامتلاك Snake.ly؟</h2>
-    <p class="text-stone/70 mb-8 max-w-md mx-auto">تواصل مباشرة مع المالك عبر واتساب لمناقشة عرضك.</p>
-    <a href="https://wa.me/218917021437" target="_blank" class="btn-venom inline-flex items-center gap-3 px-9 py-4 rounded-full text-base">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.32A8.86 8.86 0 0 0 12.05 4a8.94 8.94 0 0 0-7.73 13.4L3 21l3.72-1.28a8.9 8.9 0 0 0 5.33 1.72h.01a8.94 8.94 0 0 0 8.93-8.93 8.9 8.9 0 0 0-3.39-6.19ZM12.06 19.9a7.4 7.4 0 0 1-3.77-1.04l-.27-.16-2.79.96.94-2.72-.18-.28a7.45 7.45 0 1 1 6.07 3.24Zm4.08-5.58c-.22-.11-1.31-.65-1.51-.72-.2-.08-.35-.11-.5.11-.15.22-.57.72-.7.87-.13.15-.26.16-.48.05-1.3-.65-2.15-1.16-3.01-2.63-.23-.39.23-.36.66-1.2.07-.15.04-.28-.03-.4-.07-.11-.6-1.45-.82-1.98-.22-.53-.44-.46-.6-.46-.15-.01-.33-.01-.5-.01-.17 0-.44.06-.68.32-.24.26-.9.88-.9 2.14 0 1.26.92 2.48 1.05 2.65.13.17 1.77 2.72 4.35 3.71 2.14.81 2.57.65 3.03.6.46-.04 1.48-.6 1.68-1.19.2-.58.2-1.08.14-1.19-.06-.1-.22-.16-.44-.27Z"/></svg>
-      +218 91 702 1437
-    </a>
+    <p class="text-stone/70 max-w-md mx-auto">أرسل رسالتك، وستصل مباشرة إلى صندوق المالك.</p>
   </div>
+
+  <form action="https://formspree.io/f/mwvddjen" method="POST" class="scale-card p-8 md:p-12 space-y-5 rise d1">
+    <div class="grid md:grid-cols-2 gap-5">
+      <input type="text" name="الاسم الكامل" placeholder="الاسم الكامل" required
+        class="border px-5 py-4 text-sm font-semibold placeholder-stone/50 bg-[var(--scale-dark)] text-white"
+        style="border-color:rgba(139,201,63,0.25)">
+      <input type="email" name="البريد الإلكتروني" placeholder="البريد الإلكتروني" required
+        class="border px-5 py-4 text-sm font-semibold placeholder-stone/50 bg-[var(--scale-dark)] text-white"
+        style="border-color:rgba(139,201,63,0.25)">
+    </div>
+
+    <select name="نوع الاهتمام" class="w-full border px-5 py-4 text-sm font-semibold bg-[var(--scale-dark)] text-white"
+      style="border-color:rgba(139,201,63,0.25)">
+      <option>اختر نوع اهتمامك</option>
+      <option>شراء مباشر</option>
+      <option>استفسار عن السعر</option>
+      <option>سؤال عام</option>
+    </select>
+
+    <textarea name="الرسالة" placeholder="اكتب رسالتك أو عرضك هنا..." rows="5" required
+      class="w-full border px-5 py-4 text-sm font-semibold placeholder-stone/50 bg-[var(--scale-dark)] text-white resize-none"
+      style="border-color:rgba(139,201,63,0.25)"></textarea>
+
+    <button type="submit" class="btn-venom w-full py-4 rounded-full text-sm">
+      إرسال الرسالة
+    </button>
+
+    <p class="text-xs text-center text-stone/50">
+      هذه الرسالة تصل مباشرة إلى صندوق البريد الخاص بمالك النطاق. لا وسطاء، لا سماسرة.
+    </p>
+  </form>
 </section>
 
 <!-- ============ Footer ============ -->
